@@ -9,13 +9,9 @@
 
 function palindrome(str) {
 
-    var newStr = str.split("");
-    for(i=0;i<newStr.length;i++){
-        if(newStr[i]!=newStr[newStr.lenght-i-1]){
-            return false;
-        }
-        return true;
-    }
+    return str.split('').every((char, i) => {
+        return char === str[str.length - i - 1];
+      });
 
 }
 
